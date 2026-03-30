@@ -9,7 +9,7 @@ def parser(filepath):
 
     with open(filepath, 'r') as f:
         for line in f:
-            line = line.strip()
+            line = line.strip() #This strips \n out of the line
             if "Failed password" in line:
                 match = re.search(pattern, line)
                 if match:
